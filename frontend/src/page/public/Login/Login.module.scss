@@ -1,0 +1,26 @@
+.box_form{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 20px;
+
+    
+}
+
+form{
+    h2{
+        text-align: center;
+    }
+    a{
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+    }
+}

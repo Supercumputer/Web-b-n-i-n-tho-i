@@ -1,0 +1,29 @@
+.text_name{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.box_avata{
+    padding: 20px;
+
+    b{
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+.text_input{
+    margin-top: 20px;
+    p:nth-child(2){
+        border-bottom: 1px solid #ede9e9;
+        font-size: 15px;
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mt_box{
+        margin-top: 100px;
+    }
+}

@@ -1,0 +1,68 @@
+.send_mail{
+    
+
+    color: var(--text-white);
+
+    p{
+        margin-bottom: 0;
+    }
+}
+
+.box_send_mail {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--radius-5);
+    background: var(--text-white);
+    input{
+        flex: 1;
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    button{
+        width: 100px;
+        padding: 5px;
+        border: 1px solid #ccc;
+    }
+}
+
+.box_logo img{
+    width: 200px;
+
+}
+
+.box_item {
+    margin-top: 20px;
+    
+    h3{
+        font-size: 18px;
+    }
+
+    p{
+        color: var(--text-gray);
+    }
+}
+
+.text{
+    color: var(--text-gray);
+}
+
+@media screen and (max-width: 700){
+  
+
+    .box_send_mail {
+     
+        input{
+            width: 100%;
+            background: none;
+            border: none;
+            outline: none;
+        }
+    
+        button{
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+    }
+}

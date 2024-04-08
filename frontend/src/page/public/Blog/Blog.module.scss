@@ -1,0 +1,48 @@
+.mt_box{
+    margin-top: 150px;
+}
+
+.text_name{
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.view{
+    cursor: pointer;
+}
+
+.back{
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.text{
+    text-align: justify;
+}
+
+.bom img{
+    height: 600px;
+    object-fit: cover;
+    border-radius: var(--radius-5);
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .bom img{
+        height: 300px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .mt_box{
+        margin-top: 110px;
+    }
+    .back{
+        justify-content: flex-end;
+    }
+
+    
+}

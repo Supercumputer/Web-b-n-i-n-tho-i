@@ -1,0 +1,242 @@
+.header_box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--text-white);
+    z-index: 10;
+  }
+
+.language {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 0 10px;
+}
+
+.logo > img {
+    width: 200px;
+}
+
+.box_serach_t{
+    position: relative;
+
+    .box_result{
+        position: absolute;
+        background: var(--text-white);
+        box-shadow: 3px 2px 7px 1px rgb(196 195 195 / 42%);
+        left: 0;
+        right: 0;
+        top: 40px;
+        padding: 5px;
+        border-radius: var(--radius-5);
+    }
+    .box_img{
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+    }
+
+    .text_s{
+        text-decoration: none;
+        color: var(--bg-dark);
+        padding: 5px;
+        border-radius: var(--radius-5);
+    }
+
+    .text_s:hover{
+        background: #F2F2F2;
+    }
+
+    .box_img img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .box_title p{
+        margin-bottom: 0;
+    }
+}
+
+.box_search {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: var(--radius-5);
+    display: flex;
+    align-items: center;
+    i {
+        padding: 10px;
+    }
+
+    input {
+        flex: 1;
+        border: none;
+        outline: none;
+        margin-right: 5px;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        padding: 5px;
+        margin: 1px;
+        border-radius: var(--radius-5);
+        background: var(--bg-primary);
+        color: var(--text-white);
+    }
+
+    
+}
+
+.hotline {
+    i {
+        font-size: 20px;
+    }
+}
+
+.phone_number {
+    p:nth-child(1) {
+        color: #3d3b3b;
+        font-size: 15px;
+    }
+
+    p:nth-child(2) {
+        font-weight: 500;
+    }
+}
+
+.box_acount_cart {
+    i {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .icon_menu {
+        display: none;
+    }
+}
+
+.box_category {
+    padding: 10px;
+    background: var(--bg-primary);
+    color: var(--text-white);
+}
+
+.menu {
+    ul {
+        margin: 0;
+        padding-left: 0;
+    }
+
+    ul li {
+        list-style: none;
+        display: inline-block;
+        margin: 10px 0;
+    }
+
+    ul li .text_menu {
+        text-decoration: none;
+        padding: 11px;
+        margin: 0 10px;
+        color: var(--text-dark);
+    }
+
+    .text_menu.active {
+        border-bottom: 2px solid var(--bg-primary);
+        color: var(--bg-primary);
+        font-weight: 500;
+    }
+}
+
+.text_sale {
+    color: red;
+    font-size: 15px;
+}
+
+.container-input {
+    display: none;
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  .input {
+    width: 150px;
+    padding: 10px;
+    border-radius: var(--radius-50);
+    border: solid 1px #333;
+    transition: all .2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+  }
+  
+  .container-input > i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-white);
+    padding: 10px;
+    background: red;
+    border-radius: var(--radius-tr);
+    cursor: pointer;
+  }
+  
+  .input:focus {
+    opacity: 1;
+    width: 250px;
+  }
+
+  .cart_link{
+    text-decoration: none;
+    color: var(--text-dark);
+  }
+
+  
+
+@media screen and (max-width: 600px) {
+    
+    .box_acount_cart {
+        .icon_menu {
+            display: block;
+        }
+    }
+    .container-input{
+        display: block;
+    }
+    .menu {
+        ul {
+            position: absolute;
+            z-index: 5;
+            background: var(--text-dark);
+            left: 0;
+            right: 0;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.2s linear ;
+        }
+        ul.check {
+            height: 250px;
+        }
+
+        ul li {
+            display: block;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        ul li .text_menu {
+            text-decoration: none;
+            padding: 11px;
+            margin: 0 10px;
+            color: var(--text-white);
+            font-size: 15px;
+        }
+
+        .text_menu.active {
+            border-bottom: 2px solid var(--bg-primary);
+            color: var(--bg-primary);
+            font-weight: 500;
+        }
+    }
+}
