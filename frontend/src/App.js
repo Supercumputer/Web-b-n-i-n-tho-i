@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { publicRouter, privateRouter } from './route';
 import PrivateRouter from './components/PrivateRouter/PrivateRouter';
@@ -25,9 +25,10 @@ function App() {
                 disPatch(login(res.userData));
             }
         } catch (error) {
-            console.log(error);
+            toast.error(error)
         }
     };
+    
     return (
         <div className="App">
             <Router>

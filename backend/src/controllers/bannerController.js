@@ -49,6 +49,7 @@ const getBanners = async (req, res, next) => {
     return res.status(200).json({ error: error.message });
   }
 };
+
 const updateBanner = async (req, res, next) => {
     try {
       const bannerId = req.params.id;

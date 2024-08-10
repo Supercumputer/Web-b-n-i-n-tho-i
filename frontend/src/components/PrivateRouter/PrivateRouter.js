@@ -1,6 +1,6 @@
 import { Outlet, Navigate, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import { login, alert, clearAlert } from '../../redux/athu';
 import { apiGetAcount } from '../../api/service';
 import Loading from '../Loading/Loading';
@@ -17,12 +17,12 @@ const PrivateRouter = () => {
         callApi();
     }, []);
 
-    useEffect(()=> {
-        if(mes){
-            shoModel('Opps!', mes, 'error')
-            disPatch(clearAlert())
-        }
-    }, [mes])
+    // useLayoutEffect(() => {
+    //     if (mes) {
+    //         shoModel('Opps!', mes, 'error');
+    //         disPatch(clearAlert());
+    //     }
+    // }, [mes]);
 
     const callApi = async () => {
         try {
@@ -30,12 +30,11 @@ const PrivateRouter = () => {
 
             if (res && res.userData) {
                 disPatch(login(res.userData));
-                setLoading(false)
-            }else{
-                disPatch(alert(res.messager))
+                setLoading(false);
+            } else {
+                disPatch(alert(res.messager));
                 setLoading(false);
             }
-            
         } catch (error) {
             console.log(error);
         }
